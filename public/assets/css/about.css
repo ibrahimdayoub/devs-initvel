@@ -1,0 +1,70 @@
+/*
+    - Assume fictitious sections names, but in reality they will change.
+    - Add media queries to each section if the section is large or at 
+      the end of the file for all sections if the sections are small.
+*/
+
+/* About Section 01 */
+
+.section-01 {
+    background-color: var(--section-bg);
+}
+
+.section-01>h1 {
+    color: var(--dark);
+    font-size: var(--head1-sm);
+}
+
+/* About Section 02 */
+
+.section-02 {
+    background-color: var(--section-bg);
+}
+
+.section-02>h2 {
+    color: var(--dark);
+    font-size: var(--head2-sm);
+}
+
+/* About Section 03 */
+
+.section-03 {
+    background-color: var(--section-bg);
+}
+
+.section-03>h3 {
+    color: var(--dark);
+    font-size: var(--head3-sm);
+}
+
+/* Responsive Section */
+
+@media screen and (min-width: 361px) {
+    .section-01>h1 {
+        font-size: var(--head1-md);
+    }
+
+    .section-02>h2 {
+        font-size: var(--head2-md);
+    }
+
+    .section-03>h3 {
+        font-size: var(--head3-md);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-01>h1 {
+        font-size: var(--head1-lg);
+    }
+
+    .section-02>h2 {
+        font-size: var(--head2-lg);
+    }
+
+    .section-03>h3 {
+        font-size: var(--head3-lg);
+    }
+}
+
+@media screen and (min-width: 992px) {}

@@ -1,0 +1,387 @@
+/* Main */
+
+@font-face {
+    /* Foreign languages */
+    font-family: "Inter";
+    src: url("../fonts/Inter.ttf") format("truetype");
+}
+
+@font-face {
+    /* Arabic languages */
+    font-family: "Rubik";
+    src: url("../fonts/Rubik.ttf") format("truetype");
+}
+
+:root {
+    --dark: #433D34;
+    --light-sky: #4caf50;
+    --dark-sky: #607d8b;
+    --section-bg: linear-gradient(to top, white, #F2E1B5);
+
+    /* +10 */
+    --head1-sm: 24px;
+    --head1-md: 34px;
+    --head1-lg: 44px;
+
+    /* +08 */
+    --head2-sm: 16px;
+    --head2-md: 24px;
+    --head2-lg: 32px;
+
+    /* +06 */
+    --head3-sm: 14px;
+    --head3-md: 20px;
+    --head3-lg: 26px;
+
+    /* +04 */
+    --head4-sm: 12px;
+    --head4-md: 16px;
+    --head4-lg: 20px;
+
+    /* +02 */
+    --read-sm: 14px;
+    --read-md: 16px;
+    --read-lg: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    line-height: 1.25;
+}
+
+::-webkit-scrollbar {
+    width: 7.5px;
+    background-image: linear-gradient(to top, white, #F2E1B5);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-gold);
+    cursor: pointer;
+}
+
+::selection {
+    background-color: var(--dark-sky);
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    line-height: 1.5;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button,
+input {
+    font-family: "Inter" !important;
+}
+
+.ar button,
+.ar input {
+    font-family: "Rubik" !important;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter" !important;
+}
+
+body.ar {
+    font-family: "Rubik" !important;
+}
+
+/* Layout */
+
+.layout {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Container */
+
+.container {
+    width: 100%;
+    padding: 25px 12.5px;
+}
+
+@media screen and (min-width: 361px) {
+    .container {
+        padding: 50px 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 50px 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 50px 125px;
+    }
+}
+
+/* Header */
+
+.header {}
+
+.header>ul {
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    color: var(--dark);
+    font-size: var(--read-sm);
+    border: 1px solid var(--light-sky);
+}
+
+.header>ul li {
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.header>ul>li {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s;
+}
+
+.header>ul>li:hover,
+.header>ul>li.active {
+    border-bottom: 1px solid var(--dark-sky);
+}
+
+.header>ul>.langs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.header>ul>.langs>.lang {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--read-sm);
+    border: 1px solid var(--dark-sky);
+    transition: 0.25s;
+}
+
+.header>ul>.langs>.lang:hover,
+.header>ul>.langs>.lang.active {
+    background-color: var(--dark-sky);
+    color: white;
+}
+
+@media only screen and (min-width: 361px) {
+    .header {}
+}
+
+@media only screen and (min-width: 768px) {
+    .header>ul {
+        padding: 10px 25px;
+        flex-direction: row;
+        gap: 10px;
+        font-size: var(--read-lg);
+    }
+
+    .header>ul>.langs {
+        flex-direction: column;
+        gap: 10px;
+        font-size: var(--read-lg);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header {}
+}
+
+/* Border Start */
+
+.border-start {
+    padding-inline-start: 10px;
+    border-inline-start: 1px solid var(--light-sky);
+}
+
+/* Footer */
+
+.footer {}
+
+.footer>.float-btn {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-sky);
+    border-radius: 50%;
+    opacity: 0.25;
+    transition: 0.25s;
+}
+
+.footer>.float-btn:hover {
+    opacity: 1;
+}
+
+.footer>.float-btn.show {
+    display: flex;
+}
+
+.footer>.float-btn>img {
+    width: 25px;
+}
+
+@media only screen and (min-width: 361px) {
+    .footer {}
+}
+
+@media only screen and (min-width: 768px) {
+    .footer {}
+}
+
+@media only screen and (min-width: 992px) {
+    .footer {}
+}
+
+/* Notifications */
+
+.notifications {
+    direction: ltr;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--dark);
+    color: white;
+    font-size: var(--read-sm);
+    text-align: center;
+    text-transform: lowercase;
+    border-top: 5px solid transparent;
+    border-radius: 0;
+    animation: hide-notification 5s ease-in-out forwards;
+    z-index: 10000;
+}
+
+.notifications>span {
+    text-transform: capitalize;
+}
+
+.notifications.success {
+    border-color: var(--light-gold);
+}
+
+.notifications.error {
+    border-color: var(--light-gold);
+}
+
+.notifications.warning {
+    border-color: var(--light-gold);
+}
+
+@media screen and (min-width: 361px) {
+    .notifications {}
+}
+
+@media screen and (min-width: 768px) {
+    .notifications {}
+}
+
+@media screen and (min-width: 992px) {
+    .notifications {}
+}
+
+/* Button Animations */
+
+.btn-anim {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn-anim::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    transform: translateX(-100%) rotate(45deg);
+    filter: blur(25px);
+}
+
+.btn-anim:hover::before {
+    animation: move-shadow 0.75s ease-in-out 0.25s 1 normal forwards;
+}
+
+/* File Animations */
+
+@keyframes hide-notification {
+    0% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes move-shadow {
+    from {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    to {
+        transform: translateX(100%) rotate(45deg);
+    }
+}

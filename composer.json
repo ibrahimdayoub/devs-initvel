@@ -1,0 +1,39 @@
+{
+  "name": "devs/initvel",
+  "description": "A laravel package for multilingual sites and project configuration",
+  "keywords": [
+    "laravel",
+    "translate",
+    "languages",
+    "multilingual",
+    "configuration"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ibrahim Dayoub",
+      "email": "ibrahimdayoub619@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3 <8.5",
+    "laravel/framework": ">=8.0 <12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Devs\\Initvel\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Devs\\Initvel\\InitvelServiceProvider"
+      ]
+    }
+  },
+  "support": {
+    "email": "ibrahimdayoub619@gmail.com",
+    "source": "https://github.com/ibrahimdayoub/devs-initvel"
+  }
+}
